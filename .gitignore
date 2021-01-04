@@ -14,7 +14,7 @@ yarn-error.log
 .idea/
 .vscode/
 .history/
-.devcontainer/
+
 
 laravel-microservice-quickstart-master.zip
 laravel-microservice-quickstart-master.zip?Zone.Identifier
