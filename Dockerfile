@@ -20,4 +20,4 @@ RUN rm -rf /var/www/html && ln -s public html
 
 USER www-data
 
-EXPOSE 9001
+EXPOSE 9000
