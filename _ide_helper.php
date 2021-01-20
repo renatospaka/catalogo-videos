@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 6.18.13 on 2021-01-19 17:00:32.
+ * Generated for Laravel 6.18.13 on 2021-01-20 00:01:21.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -15166,6 +15166,194 @@ namespace Facade\Ignition\Facades {
  
 }
 
+namespace Vizir\KeycloakWebGuard\Facades { 
+
+    /**
+     * 
+     *
+     */ 
+    class KeycloakWeb {
+        
+        /**
+         * Return the login URL
+         *
+         * @link https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth
+         * @return string 
+         * @static 
+         */ 
+        public static function getLoginUrl()
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        return $instance->getLoginUrl();
+        }
+        
+        /**
+         * Return the logout URL
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getLogoutUrl()
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        return $instance->getLogoutUrl();
+        }
+        
+        /**
+         * Return the register URL
+         *
+         * @link https://stackoverflow.com/questions/51514437/keycloak-direct-user-link-registration
+         * @return string 
+         * @static 
+         */ 
+        public static function getRegisterUrl()
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        return $instance->getRegisterUrl();
+        }
+        
+        /**
+         * Get access token from Code
+         *
+         * @param string $code
+         * @return array 
+         * @static 
+         */ 
+        public static function getAccessToken($code)
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        return $instance->getAccessToken($code);
+        }
+        
+        /**
+         * Refresh access token
+         *
+         * @param string $refreshToken
+         * @return array 
+         * @static 
+         */ 
+        public static function refreshAccessToken($credentials)
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        return $instance->refreshAccessToken($credentials);
+        }
+        
+        /**
+         * Invalidate Refresh
+         *
+         * @param string $refreshToken
+         * @return array 
+         * @static 
+         */ 
+        public static function invalidateRefreshToken($refreshToken)
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        return $instance->invalidateRefreshToken($refreshToken);
+        }
+        
+        /**
+         * Get access token from Code
+         *
+         * @param array $credentials
+         * @return array 
+         * @static 
+         */ 
+        public static function getUserProfile($credentials)
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        return $instance->getUserProfile($credentials);
+        }
+        
+        /**
+         * Retrieve Token from Session
+         *
+         * @return array|null 
+         * @static 
+         */ 
+        public static function retrieveToken()
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        return $instance->retrieveToken();
+        }
+        
+        /**
+         * Save Token to Session
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function saveToken($credentials)
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        $instance->saveToken($credentials);
+        }
+        
+        /**
+         * Remove Token from Session
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function forgetToken()
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        $instance->forgetToken();
+        }
+        
+        /**
+         * Validate State from Session
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function validateState($state)
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        $instance->validateState($state);
+        }
+        
+        /**
+         * Save State to Session
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function saveState()
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        $instance->saveState();
+        }
+        
+        /**
+         * Remove State from Session
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function forgetState()
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        $instance->forgetState();
+        }
+        
+        /**
+         * Build a URL with params
+         *
+         * @param string $url
+         * @param array $params
+         * @return string 
+         * @static 
+         */ 
+        public static function buildUrl($url, $params)
+        {
+                        /** @var \Vizir\KeycloakWebGuard\Services\KeycloakService $instance */
+                        return $instance->buildUrl($url, $params);
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -18061,6 +18249,8 @@ namespace  {
     class View extends \Illuminate\Support\Facades\View {}
 
     class Flare extends \Facade\Ignition\Facades\Flare {}
+
+    class KeycloakWeb extends \Vizir\KeycloakWebGuard\Facades\KeycloakWeb {}
  
 }
 
